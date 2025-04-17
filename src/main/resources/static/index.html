@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Gothic+Expanded+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <span class="nav-span">Student Course Management</span>
+    </nav>
+    <div class="container">
+      <div class="user-selection-box">
+        <input type="radio" id="student" name="user" value="student" />
+        <label for="student">Student</label><br />
+        <input type="radio" id="instructor" name="user" value="instructor" />
+        <label for="instructor">Instructor</label><br />
+      </div>
+      <form class="login-form" action="/login" method="POST">
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-input" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-input" name="password" required />
+        </div>
+        <button type="submit" id="login-button">Login</button>
+        <p id="loader" style="text-align:center; color:#4CAF50; font-weight:bold;"></p>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<config
+        xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xmlns='http://www.ehcache.org/v3'
+        xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core.xsd">
+
+    <cache alias="springboot_project.model.Student">
+        <expiry>
+            <ttl unit="minutes">10</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">500</heap>
+        </resources>
+    </cache>
+
+    <cache alias="springboot_project.model.Instructor">
+        <expiry>
+            <ttl unit="minutes">10</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">500</heap>
+        </resources>
+    </cache>
+
+    <cache alias="springboot_project.model.Course">
+        <expiry>
+            <ttl unit="minutes">10</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">500</heap>
+        </resources>
+    </cache>
+
+    <cache alias="springboot_project.model.Enrollment">
+        <expiry>
+            <ttl unit="minutes">10</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">500</heap>
+        </resources>
+    </cache>
+
+    <!-- Optional: Default cache fallback -->
+    <cache alias="defaultCache">
+        <expiry>
+            <ttl unit="minutes">5</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">1000</heap>
+        </resources>
+    </cache>
+
+    <cache alias="org.hibernate.cache.internal.StandardQueryCache">
+    <expiry>
+        <ttl unit="minutes">5</ttl>
+    </expiry>
+    <resources>
+        <heap unit="entries">200</heap>
+    </resources>
+</cache>
+
+</config>
